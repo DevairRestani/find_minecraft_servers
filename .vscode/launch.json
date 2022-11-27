@@ -1,0 +1,45 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'find_minecraft_servers'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=find_minecraft_servers",
+                    "--package=find_minecraft_servers"
+                ],
+                "filter": {
+                    "name": "find_minecraft_servers",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'find_minecraft_servers'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=find_minecraft_servers",
+                    "--package=find_minecraft_servers"
+                ],
+                "filter": {
+                    "name": "find_minecraft_servers",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
